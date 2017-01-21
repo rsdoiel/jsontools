@@ -63,12 +63,9 @@ dist/LICENSE: LICENSE
 dist/INSTALL.md: INSTALL.md
 	cp -v INSTALL.md dist/
 
-dist/demo:
-	cp -vR demo dist/
-
 targets: dist/linux-amd64 dist/macosx-amd64 dist/windows-amd64 dist/raspbian-arm7 dist/raspbian-arm6
 
-docs: dist dist/README.md dist/LICENSE dist/INSTALL.md dist/demo 
+docs: dist dist/README.md dist/LICENSE dist/INSTALL.md
 
 zip: $(PROJECT)-$(VERSION)-release.zip 
 	zip -r $(PROJECT)-$(VERSION)-release.zip dist/
