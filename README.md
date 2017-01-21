@@ -8,14 +8,14 @@ Various utilities for simplifying JSON data work on the command line.
 + [jsoncols](jsoncols.html) - a tool for exploring and extracting JSON values into columns
 
 Compiled versions are provided for Linux (amd64), Mac OS X (amd64),
-Windows 10 (amd64) and Raspbian (ARM6, ARM7). See https://github.com/rsdoiel/jsoncols.
+Windows 10 (amd64) and Raspbian (ARM6, ARM7). See https://github.com/rsdoiel/jsontools.
 
 Use the utilities try "-help" option for a full list of options.
 
 
 ## Installation
 
-_jsoncols_ is go get-able.
+_jsontools_ is go get-able.
 
 ```
     go get github.com/rsdoiel/jsontools/...
