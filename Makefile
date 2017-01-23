@@ -62,28 +62,21 @@ dist/windows-amd64:
 	env CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o dist/windows-amd64/jsonrange.exe cmds/jsonrange/jsonrange.go
 	env CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o dist/windows-amd64/xlsx2json.exe cmds/xlsx2json/xlsx2json.go
 
+dist/raspbian-arm7:
+	env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 go build -o dist/raspbian-arm7/jsoncols cmds/jsoncols/jsoncols.go
+	env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 go build -o dist/raspbian-arm7/jsonrange cmds/jsonrange/jsonrange.go
+	env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 go build -o dist/raspbian-arm7/xlsx2json cmds/xlsx2json/xlsx2json.go
+
 dist/raspbian-arm6:
 	env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=6 go build -o dist/raspbian-arm6/jsoncols cmds/jsoncols/jsoncols.go
 	env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=6 go build -o dist/raspbian-arm6/jsonrange cmds/jsonrange/jsonrange.go
 	env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=6 go build -o dist/raspbian-arm6/xlsx2json cmds/xlsx2json/xlsx2json.go
 
-dist:
+
+release: dist/linux-amd64 dist/macosx-amd64 dist/windows-amd64 dist/raspbian-arm7 dist/raspbian-arm6
 	mkdir -p dist
-
-dist/README.md: README.md
 	cp -v README.md dist/
-
-dist/LICENSE: LICENSE
 	cp -v LICENSE dist/
-
-dist/INSTALL.md: INSTALL.md
 	cp -v INSTALL.md dist/
-
-targets: dist/linux-amd64 dist/macosx-amd64 dist/windows-amd64 dist/raspbian-arm7 dist/raspbian-arm6
-
-docs: dist dist/README.md dist/LICENSE dist/INSTALL.md
-
-zip: $(PROJECT)-$(VERSION)-release.zip 
 	zip -r $(PROJECT)-$(VERSION)-release.zip dist/
 
-release: targets docs zip
