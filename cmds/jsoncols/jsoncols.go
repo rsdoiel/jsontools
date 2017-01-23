@@ -102,7 +102,7 @@ func main() {
 	args := flag.Args()
 
 	// Configuration and command line interation
-	cfg := cli.New(appName, "JSONQUERY", fmt.Sprintf(jsontools.LicenseText, appName, jsontools.Version), jsontools.Version)
+	cfg := cli.New(appName, "JSONTOOLS", fmt.Sprintf(jsontools.LicenseText, appName, jsontools.Version), jsontools.Version)
 	cfg.UsageText = fmt.Sprintf(usage, appName)
 	cfg.DescriptionText = fmt.Sprintf(description, appName, appName, appName)
 	cfg.OptionsText = "OPTIONS\n"
