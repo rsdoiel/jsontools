@@ -13,12 +13,12 @@ if the expression is a map/object then the keys or attribute names are turned.
 + EXPRESSION can be an empty string contains a JSON array or map.
 
 ```
-	-d	set delimiter for range output
-	-h	display help
-	-l	display license
-	-length	return the number of keys or values
-	-limit	limit the number of items output
-	-v	display version
+    -d    set delimiter for range output
+    -h    display help
+    -l    display license
+    -length    return the number of keys or values
+    -limit    limit the number of items output
+    -v    display version
 ```
 
 ## EXAMPLES
@@ -33,8 +33,8 @@ This would yield
 
 ```
     name
-	email
-	age
+    email
+    age
 ```
 
 Working with an array
@@ -47,8 +47,8 @@ would yield
 
 ```
     one
-	2
-	{"label":"three","value":3}
+    2
+    {"label":"three","value":3}
 ```
 
 Checking the length of a map or array
@@ -72,6 +72,6 @@ would yield
 
 ```
     1
-	2
+    2
 ```
 
