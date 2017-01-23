@@ -7,11 +7,13 @@ VERSION = $(shell grep -m1 'Version = ' $(PROJECT).go | cut -d\"  -f 2)
 
 BRANCH = $(shell git branch | grep '* ' | cut -d\  -f 2)
 
-build: bin/jsoncols 
+build: bin/jsoncols bin/xlsx2json
 
 bin/jsoncols: jsontools.go cmds/jsoncols/jsoncols.go
 	go build -o bin/jsoncols cmds/jsoncols/jsoncols.go 
 
+bin/xlsx2json: cmds/xlsx2json/xlsx2json.go
+	go build -o bin/xlsx2json cmds/xlsx2json/xlsx2json.go
 
 website:
 	./mk-website.bash
@@ -39,18 +41,23 @@ clean:
 
 install:
 	env GOBIN=$(HOME)/bin go install cmds/jsoncols/jsoncols.go
+	env GOBIN=$(HOME)/bin go install cmds/xlsx2json/xlsx2json.go
 
 dist/linux-amd64:
 	env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o dist/linux-amd64/jsoncols cmds/jsoncols/jsoncols.go
+	env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o dist/linux-amd64/xlsx2json cmds/xlsx2json/xlsx2json.go
 
 dist/macosx-amd64:
 	env CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o dist/macosx-amd64/jsoncols cmds/jsoncols/jsoncols.go
+	env CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o dist/macosx-amd64/xlsx2json cmds/xlsx2json/xlsx2json.go
 
 dist/windows-amd64:
 	env CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o dist/windows-amd64/jsoncols.exe cmds/jsoncols/jsoncols.go
+	env CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o dist/windows-amd64/xlsx2json.exe cmds/xlsx2json/xlsx2json.go
 
 dist/raspbian-arm6:
 	env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=6 go build -o dist/raspbian-arm6/jsoncols cmds/jsoncols/jsoncols.go
+	env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=6 go build -o dist/raspbian-arm6/xlsx2json cmds/xlsx2json/xlsx2json.go
 
 dist:
 	mkdir -p dist
