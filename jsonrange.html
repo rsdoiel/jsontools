@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jsontools -- a small collection of file and shell utilities</title>
+    <link href="css/site.css" rel="stylesheet" />
+<head>
+<body>
+    <header>
+        <h1>jsontools -- a small collection of file and shell utilities</h1>
+    </header>
+    <section><h1>USAGE</h1>
+
+<pre><code>jsonrange [OPTIONS] JSON_EXPRESSION 
+</code></pre>
+
+<h2>SYSNOPSIS</h2>
+
+<p>jsonrange turns either the JSON expression that is a map or array into delimited
+elements suitable for processing in a &ldquo;for&rdquo; style loop in Bash. If the
+JSON expression is an array then the elements of the array are returned else
+if the expression is a map/object then the keys or attribute names are turned.</p>
+
+<ul>
+<li>EXPRESSION can be an empty string contains a JSON array or map.</li>
+</ul>
+
+<pre><code>	-d	set delimiter for range output
+	-h	display help
+	-l	display license
+	-length	return the number of keys or values
+	-limit	limit the number of items output
+	-v	display version
+</code></pre>
+
+<h2>EXAMPLES</h2>
+
+<p>Working with a map</p>
+
+<pre><code>    jsonrange '{&quot;name&quot;: &quot;Doe, Jane&quot;, &quot;email&quot;:&quot;jane.doe@example.org&quot;, &quot;age&quot;: 42}'
+</code></pre>
+
+<p>This would yield</p>
+
+<pre><code>    name
+	email
+	age
+</code></pre>
+
+<p>Working with an array</p>
+
+<pre><code>    jsonrange '[&quot;one&quot;, 2, {&quot;label&quot;:&quot;three&quot;,&quot;value&quot;:3]]'
+</code></pre>
+
+<p>would yield</p>
+
+<pre><code>    one
+	2
+	{&quot;label&quot;:&quot;three&quot;,&quot;value&quot;:3}
+</code></pre>
+
+<p>Checking the length of a map or array</p>
+
+<pre><code>    jsonrange -length '[&quot;one&quot;,&quot;two&quot;,&quot;three&quot;]'
+</code></pre>
+
+<p>would yield</p>
+
+<pre><code>    3
+</code></pre>
+
+<p>Limitting the number of items returned</p>
+
+<pre><code>    jsonrange -limit 2 '[1,2,3,4,5]'
+</code></pre>
+
+<p>would yield</p>
+
+<pre><code>    1
+	2
+</code></pre>
+</section>
+    <nav><ul>
+<li><a href="/">home</a></li>
+<li><a href="./">jsontools</a></li>
+<li><a href="license.html">LICENSE</a></li>
+<li><a href="install.html">Install</a></li>
+<li><a href="jsoncols.html">jsoncols</a></li>
+<li><a href="jsonrange.html">jsonrange</a></li>
+<li><a href="https://github.com/rsdoiel/jsontools">Github</a></li>
+</ul>
+</nav>
+    <footer>
+    copyright &copy; 2014-2017 R. S. Doiel<br />
+    see: <a href="license.html">LICENSE</a>
+    </footer>
+</body>
+</html>

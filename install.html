@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jsontools -- a small collection of file and shell utilities</title>
+    <link href="css/site.css" rel="stylesheet" />
+<head>
+<body>
+    <header>
+        <h1>jsontools -- a small collection of file and shell utilities</h1>
+    </header>
+    <section><h1>Installation</h1>
+
+<h2>Compiled version</h2>
+
+<p><em>jsontools</em> is a collection of command line programs run from a shell like Bash (or Powershell in Windows). If you download the repository a compiled version is in the dist directory. The compiled VERSION_NO matching your computer type and operating system can be copied to a bin directory in your PATH.</p>
+
+<p>Compiled versions are available for Mac OS X (amd64 processor), Linux (amd64), Windows (amd64) and Rapsberry Pi (both ARM6 and ARM7)</p>
+
+<h3>Mac OS X</h3>
+
+<ol>
+<li>Download <strong>jsontools-VERSION_NO-release.zip</strong> from <a href="https://github.com/rsdoiel/jsontools/releases/latest">https://github.com/rsdoiel/jsontools/releases/latest</a></li>
+<li>Open a finder window, find and unzip <strong>jsontools-VERSION_NO-release.zip</strong></li>
+<li>Look in the unziped folder and find <em>dist/macosx-amd64/</em></li>
+<li>Drag (or copy) <em>jsoncols</em>, etc. to a &ldquo;bin&rdquo; directory in your path</li>
+<li>Open and &ldquo;Terminal&rdquo; and run <code>jsoncols -h</code> to confirm you were successful</li>
+</ol>
+
+<h3>Windows</h3>
+
+<ol>
+<li>Download <strong>jsontools-VERSION_NO-release.zip</strong> from <a href="https://github.com/rsdoiel/jsontools/releases/latest">https://github.com/rsdoiel/jsontools/releases/latest</a></li>
+<li>Open the file manager find and unzip <strong>jsontools-VERSION_NO-release.zip</strong></li>
+<li>Look in the unziped folder and find <em>dist/windows-amd64/</em></li>
+<li>Drag (or copy) <em>jsoncols.exe</em>, etc. to a &ldquo;bin&rdquo; directory in your path</li>
+<li>Open Bash and and run <code>jsoncols -h</code> to confirm you were successful</li>
+</ol>
+
+<h3>Linux</h3>
+
+<ol>
+<li>Download <strong>jsontools-VERSION_NO-release.zip</strong> from <a href="https://github.com/rsdoiel/jsontools/releases/latest">https://github.com/rsdoiel/jsontools/releases/latest</a></li>
+<li>Find and unzip <strong>jsontools-VERSION_NO-release.zip</strong></li>
+<li>In the unziped directory and find for <em>dist/linux-amd64/</em></li>
+<li>Copy <em>jsoncols</em>, etc. to a &ldquo;bin&rdquo; directory (e.g. cp ~/Downloads/jsontools-VERSION_NO-release/dist/linux-amd64/* ~/bin/)</li>
+<li>From the shell prompt run <code>jsoncols -h</code> to confirm you were successful</li>
+</ol>
+
+<h3>Raspberry Pi</h3>
+
+<p>If you are using a Raspberry Pi 2 or later use the ARM7 VERSION_NO, ARM6 is only for the first generaiton Raspberry Pi.</p>
+
+<ol>
+<li>Download <strong>jsontools-VERSION_NO-release.zip</strong> from <a href="https://github.com/rsdoiel/jsontools/releases/latest">https://github.com/rsdoiel/jsontools/releases/latest</a></li>
+<li>Find and unzip <strong>jsontools-VERSION_NO-release.zip</strong></li>
+<li>In the unziped directory and find for <em>dist/raspberrypi-arm7/</em></li>
+<li>Copy <em>jsoncols</em>, etc. to a &ldquo;bin&rdquo; directory (e.g. cp ~/Downloads/jsontools-VERSION_NO-release/dist/raspberrypi-arm7/* ~/bin/)
+
+<ul>
+<li>if you are using an original Raspberry Pi you should copy the ARM6 version instead</li>
+</ul></li>
+<li>From the shell prompt run <code>jsoncols -h</code> to confirm you were successful</li>
+</ol>
+
+<h2>Compiling from source</h2>
+
+<p>If you have go v1.7 or better installed then should be able to &ldquo;go get&rdquo; to install all the <strong>jsontools</strong> utilities and</p>
+
+<h1>Installation</h1>
+
+<h2>Compiled version</h2>
+
+<p><em>jsontools</em> is a collection of command line programs run from a shell like Bash (or Powershell in Windows). If you download the repository a compiled version is in the dist directory. The compiled VERSION_NO matching your computer type and operating system can be copied to a bin directory in your PATH.</p>
+
+<p>Compiled versions are available for Mac OS X (amd64 processor), Linux (amd64), Windows (amd64) and Rapsberry Pi (both ARM6 and ARM7)</p>
+
+<h3>Mac OS X</h3>
+
+<ol>
+<li>Download <strong>jsontools-VERSION_NO-release.zip</strong> from <a href="https://github.com/rsdoiel/jsontools/releases/latest">https://github.com/rsdoiel/jsontools/releases/latest</a></li>
+<li>Open a finder window, find and unzip <strong>jsontools-VERSION_NO-release.zip</strong></li>
+<li>Look in the unziped folder and find <em>dist/macosx-amd64/</em></li>
+<li>Drag (or copy) <em>jsoncols</em>, etc. to a &ldquo;bin&rdquo; directory in your path</li>
+<li>Open and &ldquo;Terminal&rdquo; and run <code>jsoncols -h</code> to confirm you were successful</li>
+</ol>
+
+<h3>Windows</h3>
+
+<ol>
+<li>Download <strong>jsontools-VERSION_NO-release.zip</strong> from <a href="https://github.com/rsdoiel/jsontools/releases/latest">https://github.com/rsdoiel/jsontools/releases/latest</a></li>
+<li>Open the file manager find and unzip <strong>jsontools-VERSION_NO-release.zip</strong></li>
+<li>Look in the unziped folder and find <em>dist/windows-amd64/</em></li>
+<li>Drag (or copy) <em>jsoncols.exe</em>, etc. to a &ldquo;bin&rdquo; directory in your path</li>
+<li>Open Bash and and run <code>jsoncols -h</code> to confirm you were successful</li>
+</ol>
+
+<h3>Linux</h3>
+
+<ol>
+<li>Download <strong>jsontools-VERSION_NO-release.zip</strong> from <a href="https://github.com/rsdoiel/jsontools/releases/latest">https://github.com/rsdoiel/jsontools/releases/latest</a></li>
+<li>Find and unzip <strong>jsontools-VERSION_NO-release.zip</strong></li>
+<li>In the unziped directory and find for <em>dist/linux-amd64/</em></li>
+<li>Copy <em>jsoncols</em>, etc. to a &ldquo;bin&rdquo; directory (e.g. cp ~/Downloads/jsontools-VERSION_NO-release/dist/linux-amd64/* ~/bin/)</li>
+<li>From the shell prompt run <code>jsoncols -h</code> to confirm you were successful</li>
+</ol>
+
+<h3>Raspberry Pi</h3>
+
+<p>If you are using a Raspberry Pi 2 or later use the ARM7 VERSION_NO, ARM6 is only for the first generaiton Raspberry Pi.</p>
+
+<ol>
+<li>Download <strong>jsontools-VERSION_NO-release.zip</strong> from <a href="https://github.com/rsdoiel/jsontools/releases/latest">https://github.com/rsdoiel/jsontools/releases/latest</a></li>
+<li>Find and unzip <strong>jsontools-VERSION_NO-release.zip</strong></li>
+<li>In the unziped directory and find for <em>dist/raspberrypi-arm7/</em></li>
+<li>Copy <em>jsoncols</em>, etc. to a &ldquo;bin&rdquo; directory (e.g. cp ~/Downloads/jsontools-VERSION_NO-release/dist/raspberrypi-arm7/* ~/bin/)
+
+<ul>
+<li>if you are using an original Raspberry Pi you should copy the ARM6 version instead</li>
+</ul></li>
+<li>From the shell prompt run <code>jsoncols -h</code> to confirm you were successful</li>
+</ol>
+
+<h2>Compiling from source</h2>
+
+<p>If you have go v1.7 or better installed then should be able to &ldquo;go get&rdquo; to install all the <strong>jsontools</strong> utilities and
+package. You will need the GOBIN environment variable set. In this example I&rsquo;ve set it to $HOME/bin.</p>
+
+<pre><code class="language-bash">    export GOBIN=$HOME/bin
+    go get github.com/rsdoiel/jsontools/...
+</code></pre>
+
+<p>Or for Windows 10 Powershell (assumes the Windows versions of Go and Git are previously installed)</p>
+
+<pre><code class="language-powershell">    $Env:GOPATH = &quot;$HOME&quot;
+    go get github.com/rsdoiel/jsontools/...
+</code></pre>
+
+<p>or to install from source on Linux/Unix systems</p>
+
+<pre><code class="language-bash">    git clone https://github.com/rsdoiel/jsontools src/github.com/rsdoiel/jsontools
+    cd src/github.com/rsdoiel/jsontools
+    make
+    make test
+    make install
+</code></pre>
+
+<p>Or for Windows 10 Powershell</p>
+
+<pre><code class="language-powershell">    $Env:GOBIN = &quot;$HOME\bin&quot;
+    git clone https://github.com/rsdoiel/jsontools src/github.com/rsdoiel/jsontools
+    cd src\github.com\rsdoiel\jsontools
+    go install cmds\jsoncols\filefile.go
+</code></pre>
+
+<p>package. You will need the GOBIN environment variable set. In this example I&rsquo;ve set it to $HOME/bin.</p>
+
+<pre><code class="language-bash">    export GOBIN=$HOME/bin
+    go get github.com/rsdoiel/jsontools/...
+</code></pre>
+
+<p>Or for Windows 10 Powershell (assumes the Windows versions of Go and Git are previously installed)</p>
+
+<pre><code class="language-powershell">    $Env:GOPATH = &quot;$HOME&quot;
+    go get github.com/rsdoiel/jsontools/...
+</code></pre>
+
+<p>or to install from source on Linux/Unix systems</p>
+
+<pre><code class="language-bash">    git clone https://github.com/rsdoiel/jsontools src/github.com/rsdoiel/jsontools
+    cd src/github.com/rsdoiel/jsontools
+    make
+    make test
+    make install
+</code></pre>
+
+<p>Or for Windows 10 Powershell</p>
+
+<pre><code class="language-powershell">    $Env:GOBIN = &quot;$HOME\bin&quot;
+    git clone https://github.com/rsdoiel/jsontools src/github.com/rsdoiel/jsontools
+    cd src\github.com\rsdoiel\jsontools
+    go install cmds\jsoncols\jsoncols.go
+</code></pre>
+</section>
+    <nav><ul>
+<li><a href="/">home</a></li>
+<li><a href="./">jsontools</a></li>
+<li><a href="license.html">LICENSE</a></li>
+<li><a href="install.html">Install</a></li>
+<li><a href="jsoncols.html">jsoncols</a></li>
+<li><a href="jsonrange.html">jsonrange</a></li>
+<li><a href="https://github.com/rsdoiel/jsontools">Github</a></li>
+</ul>
+</nav>
+    <footer>
+    copyright &copy; 2014-2017 R. S. Doiel<br />
+    see: <a href="license.html">LICENSE</a>
+    </footer>
+</body>
+</html>

@@ -187,14 +187,14 @@ func main() {
 		}
 		fmt.Printf("%d", l)
 	case strings.HasPrefix(src, "{"):
-		elems, err := srcKeys(src, limit)
+		elems, err := srcKeys(src, limit-1)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "%s", err)
 			os.Exit(1)
 		}
 		fmt.Println(strings.Join(elems, delimiter))
 	case strings.HasPrefix(src, "["):
-		elems, err := srcVals(src, limit)
+		elems, err := srcVals(src, limit-1)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "%s", err)
 			os.Exit(1)

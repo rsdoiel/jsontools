@@ -6,6 +6,7 @@
 Various utilities for simplifying JSON data work on the command line. 
 
 + [jsoncols](jsoncols.html) - a tool for exploring and extracting JSON values into columns
++ [jsonrange](jsonrange.html) - a tool for iterating for JSON maps and arrays
 
 Compiled versions are provided for Linux (amd64), Mac OS X (amd64),
 Windows 10 (amd64) and Raspbian (ARM6, ARM7). See https://github.com/rsdoiel/jsontools.
