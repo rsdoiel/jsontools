@@ -52,20 +52,20 @@ A simple JavaScript Examples:
 
 
 ```
-	-c	The name of the JavaScript function to use as a callback
-	-callback	The name of the JavaScript function to use as a callback
-	-h	display help
-	-help	display help
-	-i	Run with an interactive repl
-	-interactive	Run with an interactive repl
-	-j	JavaScript filename
-	-js	JavaScript filename
-	-l	display license
-	-license	display license
-	-s	Specify the number of the sheet to process
-	-sheet	Specify the number of the sheet to process
-	-v	display version
-	-version	display version
+    -c    The name of the JavaScript function to use as a callback
+    -callback    The name of the JavaScript function to use as a callback
+    -h    display help
+    -help    display help
+    -i    Run with an interactive repl
+    -interactive    Run with an interactive repl
+    -j    JavaScript filename
+    -js    JavaScript filename
+    -l    display license
+    -license    display license
+    -s    Specify the number of the sheet to process
+    -sheet    Specify the number of the sheet to process
+    -v    display version
+    -version    display version
 ```
 
 ## EXAMPLES
@@ -73,10 +73,10 @@ A simple JavaScript Examples:
 ```
     xlsx2json myfile.xlsx
 
-	xlsx2json counter.js myfile.xlsx
+    xlsx2json counter.js myfile.xlsx
 
     xlsx2json -callback row2obj row2obj.js myfile.xlsx
 
-	xlsx2json -i myfile.xlsx
+    xlsx2json -i myfile.xlsx
 ```
 

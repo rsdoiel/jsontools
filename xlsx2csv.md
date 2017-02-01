@@ -10,11 +10,11 @@ Excel workbook in the .xlsx format. CSV content is written to Stdout.
 ## OPTIONS
 
 ``
-	-c	display number of sheets in Excel Workbook
-	-h	display help
-	-l	display license
-	-n	display sheet names in Excel W9rkbook
-	-v	display version
+    -c    display number of sheets in Excel Workbook
+    -h    display help
+    -l    display license
+    -n    display sheet names in Excel W9rkbook
+    -v    display version
 ```
 
 ## EXAMPLE
@@ -41,7 +41,7 @@ Putting it all together in a shell script.
 ```shell
     for SHEET_NAME in $(xlsx2csv -n my-workbook.xlsx); do
        xlsx2csv my-workbook.xlsx "$SHEET_NAME" > \
-	       $(slugify "$SHEET_NAME").csv
+           $(slugify "$SHEET_NAME").csv
     done
 ```
 
