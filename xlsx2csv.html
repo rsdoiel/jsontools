@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jsontools -- a small collection of file and shell utilities</title>
+    <link href="css/site.css" rel="stylesheet" />
+<head>
+<body>
+    <header>
+        <h1>jsontools -- a small collection of file and shell utilities</h1>
+    </header>
+    <section><h1>USAGE</h1>
+
+<pre><code>xlsx2csv [OPTIONS] EXCEL_WORKBOOK_NAME [SHEET_NAME]
+</code></pre>
+
+<h2>SYNOPSIS</h2>
+
+<p>xlsx2csv is a tool to extract individual Excel sheets as CSV output from an
+Excel workbook in the .xlsx format. CSV content is written to Stdout.</p>
+
+<h2>OPTIONS</h2>
+
+<p>``
+    -c  display number of sheets in Excel Workbook
+    -h  display help
+    -l  display license
+    -n  display sheet names in Excel W9rkbook
+    -v  display version</p>
+
+<pre><code>
+## EXAMPLE
+
+</code></pre>
+
+<pre><code>xlsx2csv my-workbook.xlsx &quot;Sheet 1&quot; &gt; sheet1.csv
+</code></pre>
+
+<pre><code>
+This would get the first sheet from the workbook and save it as a CSV file.
+
+</code></pre>
+
+<pre><code>xlsx2csv -c my-workbook.xlsx
+</code></pre>
+
+<pre><code>
+This will output the number of sheels in the Workbook.
+
+</code></pre>
+
+<pre><code>xlsx2csv -n my-workbook.xlsx
+</code></pre>
+
+<pre><code>
+This will display a list of sheet names, one per line.
+Putting it all together in a shell script.
+
+```shell
+    for SHEET_NAME in $(xlsx2csv -n my-workbook.xlsx); do
+       xlsx2csv my-workbook.xlsx &quot;$SHEET_NAME&quot; &gt; \
+	       $(slugify &quot;$SHEET_NAME&quot;).csv
+    done
+</code></pre>
+</section>
+    <nav><ul>
+<li><a href="/">home</a></li>
+<li><a href="./">jsontools</a></li>
+<li><a href="license.html">LICENSE</a></li>
+<li><a href="install.html">Install</a></li>
+<li><a href="jsoncols.html">jsoncols</a></li>
+<li><a href="jsonrange.html">jsonrange</a></li>
+<li><a href="https://github.com/rsdoiel/jsontools">Github</a></li>
+</ul>
+</nav>
+    <footer>
+    copyright &copy; 2017 R. S. Doiel<br />
+    see: <a href="license.html">LICENSE</a>
+    </footer>
+</body>
+</html>

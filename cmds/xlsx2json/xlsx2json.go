@@ -293,8 +293,7 @@ func main() {
 		fmt.Sprintf(LicenseText, appName, Version),
 		Version)
 	cfg.UsageText = fmt.Sprintf(usage, appName)
-	cfg.DescriptionText = description
-	cfg.OptionsText = "OPTIONS\n"
+	cfg.DescriptionText = fmt.Sprintf(description, appName)
 	cfg.ExampleText = fmt.Sprintf(examples, appName, appName, appName, appName)
 
 	// handle Standard Options
