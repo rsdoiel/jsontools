@@ -28,9 +28,9 @@ import (
 	"path"
 	"strings"
 
-	// CaltechLibrary packages
-	"github.com/caltechlibrary/cli"
-	"github.com/caltechlibrary/jsontools"
+	// My packages
+	"github.com/rsdoiel/cli"
+	"github.com/rsdoiel/jsontools"
 
 	// 3rd Party packages
 	"github.com/tealeg/xlsx"
