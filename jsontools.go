@@ -7,7 +7,7 @@
 package jsontools
 
 const (
-	Version = "v0.0.1-alpha2"
+	Version = "v0.0.1"
 
 	LicenseText = `
 %s %s
