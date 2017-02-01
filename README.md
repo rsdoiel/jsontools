@@ -19,7 +19,7 @@ Use the utilities try "-help" option for a full list of options.
 
 _jsontools_ is go get-able.
 
-```
+```shell
     go get github.com/rsdoiel/jsontools/...
 ```
 

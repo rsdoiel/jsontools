@@ -9,7 +9,7 @@ Excel workbook in the .xlsx format. CSV content is written to Stdout.
 
 ## OPTIONS
 
-``
+```
     -c    display number of sheets in Excel Workbook
     -h    display help
     -l    display license
