@@ -2,7 +2,7 @@
 
 # jsonshells
 
-Various utilities for simplifying JSON data work on the command line. 
+Various utilities for simplifying JSON and CSV data work on the command line. 
 
 + [jsoncols](jsoncols.html) - a tool for exploring and extracting JSON values into columns
 + [jsonrange](jsonrange.html) - a tool for iterating for JSON maps and arrays
