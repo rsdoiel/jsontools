@@ -1,5 +1,7 @@
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
+Depreciated, see https://github.com/caltechlibrary/datatools and https://caltechlibrary.github.io/datatools
+
 # jsonshells
 
 Various utilities for simplifying JSON and CSV data work on the command line. 
